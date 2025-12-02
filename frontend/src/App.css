@@ -1,0 +1,609 @@
+/* ========= GLOBAL RESET ========= */
+body,
+html,
+#root,
+.App {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  color: #e6eaf2;
+  text-align: center;
+}
+
+
+/* ========= BACKGROUND VIDEO ========= */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: -2;
+}
+
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  z-index: -1;
+}
+
+/* ========= HEADER ========= */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: rgba(231, 207, 233, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  color: black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.logo img {
+  width: 28px;
+  height: 28px;
+}
+
+/* ========= HERO ========= */
+.hero {
+  margin: 40px 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: black;
+}
+
+.hero p {
+  color: #2b2b2b;
+  font-size: 18px;
+}
+
+/* ========= UPLOAD CARD ========= */
+.upload-card {
+  background: rgba(228, 197, 222, 0.9);
+  border: 1px solid rgba(97, 66, 91, 1);
+  border-radius: 16px;
+  padding: 30px;
+  margin: 20px auto 60px;
+  max-width: 650px;
+  text-align: left;
+  color: black;
+}
+
+.dropzone {
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  background: #d5a7cc8f;
+  border-radius: 16px;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.dropzone.active {
+  border-color: #f53de9;
+  background: rgba(213, 167, 204, 0.9);
+}
+
+.drop-main-text {
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+}
+
+.drop-sub-text {
+  font-size: 13px;
+  color: #2b2b2b;
+}
+
+/* ========= BUTTONS ========= */
+.btn-primary {
+  margin-top: 15px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(120deg, #FF53C0 0%, #FF8AC9 50%, #FF9AE2 100%);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 83, 192, 0.35);
+}
+
+.btn-secondary {
+  margin-top: 15px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 500;
+  color: #374151;
+  background: #F3F4F6;
+  border: 1px solid #D1D5DB;
+  cursor: pointer;
+}
+
+
+/* ========= BACK BUTTON ========= */
+.back-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #111827;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+
+.back-btn:hover {
+  background: #fff;
+}
+
+/* ========= ANALYSIS LAYOUT ========= */
+.analysis-container {
+  max-width: 1200px;
+  margin: 40px auto 70px;
+  padding: 0 32px;
+}
+
+/* Main pink panel */
+.analysis-card {
+  background: rgba(5, 2, 4, 0.96); /* soft baby pink */
+  border-radius: 28px;
+  padding: 32px 40px 36px;
+  border: 1px solid #F5B6D9;            /* soft pink border */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  color: #1F2933;                        /* dark text for contrast */
+  text-align: center;
+}
+
+
+
+/* ========= RESULT HEADER ========= */
+.result-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.result-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #C0256C; /* deep rose */
+}
+
+.risk-pill {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 8px 22px;
+  border-radius: 999px;
+  background: #F973A6;    /* pink chip */
+  color: #FEF2F8;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.confidence-text {
+  margin-bottom: 20px;
+  color: #4B5563;
+  font-size: 0.95rem;
+}
+
+
+.image-card {
+  background: #FDF5FA;                  /* even lighter pink panel */
+  border-radius: 18px;
+  padding: 14px 16px 18px;
+  border: 1px solid #F5B6D9;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+
+
+
+/* ========= SECTIONS ========= */
+.section {
+  margin-top: 22px;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ========= METRICS ========= */
+.metric-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.metric {
+  flex: 1 1 150px;
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* ========= VISUAL ANALYSIS TABS ========= */
+.visual-tabs {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+  border-bottom: 1px solid rgba(30, 64, 175, 0.5);
+}
+
+.visual-tab {
+  background: transparent;
+  border: none;
+  padding: 8px 0 10px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.visual-tab.active {
+  color: #f9fafb;
+  border-bottom-color: #f53de9;
+}
+
+.visual-panel {
+  margin-top: 18px;
+}
+
+.visual-image-card {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 16px;
+  padding: 14px 14px 18px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.visual-image-card img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* ========= MODEL DETAILS TABS ========= */
+.details-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 14px;
+  border-bottom: 1px solid rgba(30, 64, 175, 0.5);
+}
+
+.details-tab {
+  background: transparent;
+  border: none;
+  padding: 8px 0 10px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.details-tab.active {
+  color: #f9fafb;
+  border-bottom-color: #f97316;
+}
+
+.details-panel {
+  margin-top: 18px;
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 16px;
+  padding: 16px 18px 18px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.details-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.details-subheading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 14px 0 6px;
+}
+
+.details-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.88rem;
+}
+
+.details-list li + li {
+  margin-top: 4px;
+}
+
+/* ========= STATISTICS ========= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.stat-item {
+  background: rgba(15, 23, 42, 0.85);
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-size: 0.85rem;
+}
+
+.stat-item span {
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ========= COMMON ========= */
+.muted {
+  color: #9ca3af;
+}
+
+.muted.small {
+  font-size: 0.8rem;
+}
+
+.btn-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 14px;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 900px) {
+  .analysis-card {
+    padding: 22px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .visual-tabs,
+  .details-tabs {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .upload-card {
+    margin: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== MAKE ALL DARK/BACKGROUND SECTIONS READABLE ===== */
+.analysis-card,
+.analysis-card * {
+  color: #ffffff !important; /* pure white text for visibility */
+}
+
+.details-panel,
+.details-panel * {
+  color: #ffffff !important;
+}
+
+.visual-image-card,
+.visual-image-card * {
+  color: #ffffff !important;
+}
+
+.metric,
+.metric * {
+  color: #ffffff !important;
+}
+
+.stat-item,
+.stat-item * {
+  color: #ffffff !important;
+}
+
+/* ===== SECTION DIVIDER ===== */
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ff4db8, #b30086);
+  margin: 50px 0 30px; /* top gap + bottom gap */
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+.section {
+  margin-top: 60px; 
+  padding-top: 35px;
+  border-top: 2px solid rgba(255, 100, 180, 0.35);
+}
+
+.result-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 10px rgba(255, 0, 120, 0.2);
+}
+
+.analysis-card {
+  backdrop-filter: blur(10px);
+  background: rgba(20, 8, 16, 0.88);
+  border: 1px solid rgba(255, 150, 220, 0.3);
+  box-shadow: 0 0 40px rgba(255, 70, 180, 0.15);
+}
+.analyze-btn {
+  background: linear-gradient(90deg, #ff4dc4, #ff7ae6);
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(255, 80, 200, 0.4);
+}
+.analyze-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.details-heading {
+  font-size: 1.3rem;
+  color: #ff96d5;
+  margin-bottom: 10px;
+  border-left: 4px solid #ff4bbd;
+  padding-left: 10px;
+}
+.details-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.details-panel {
+  background: rgba(22, 22, 22, 0.95);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255, 118, 178, 0.3);
+}
+.action-btn {
+  background: linear-gradient(90deg, #ff4bbd, #ff8cd1);
+  padding: 14px;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 20px rgba(255, 77, 185, 0.4);
+}
+.details-panel {
+  max-width: 1000px;
+  margin: auto;
+}
+/* Button style for Analyze Another */
+.analyze-btn {
+  background-color: #FF53C0;  /* Bright color for visibility */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px; /* Rounded corners for modern look */
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for better focus */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.analyze-btn:hover {
+  background-color: #FF8AC9;  /* Lighter shade on hover */
+  transform: translateY(-2px); /* Slight pop effect on hover */
+}
+
+.analyze-btn:active {
+  background-color: #FF53C0;  /* Reset back to the original color on click */
+  transform: translateY(1px);  /* Slight push effect on click */
+}
+/* ========= ANALYSIS LAYOUT ========= */
+.analysis-container {
+  max-width: 1200px;
+  margin: 40px auto 70px;
+  padding: 0 32px;
+  text-align: left; /* Aligns content to the left */
+}
+
+/* Main pink panel */
+.analysis-card {
+  background: rgba(5, 2, 4, 0.96); /* soft baby pink */
+  border-radius: 28px;
+  padding: 32px 40px 36px;
+  border: 1px solid #F5B6D9;            /* soft pink border */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  color: #1F2933;                        /* dark text for contrast */
+  text-align: left;  /* Align the text inside the card to the left */
+}
+
+/* ========= ANALYSIS LAYOUT ========= */
+.analysis-container {
+  max-width: 1200px;
+  margin: 40px auto 70px;
+  padding: 0 32px;
+  text-align: center; /* Keep the default text alignment as center */
+}
+
+/* Main pink panel */
+.analysis-card {
+  background: rgba(5, 2, 4, 0.96); /* soft baby pink */
+  border-radius: 28px;
+  padding: 32px 40px 36px;
+  border: 1px solid #F5B6D9;            /* soft pink border */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  color: #1F2933;                        /* dark text for contrast */
+  text-align: center; /* Keep this as center for the rest of the content */
+}
+
+/* ========= LEFT ALIGNMENT FOR "Model & Risk Details" ===== */
+.model-risk-details {
+  text-align: left; /* Left-align the content under "Model & Risk Details" */
+  padding-left: 20px; /* Optional: Adds some padding to the left */
+}
+
+/* ===== LEFT ALIGNMENT SPECIFICALLY FOR THE "MODEL & RISK DETAILS" CONTENT */
+.result-header,
+.result-title,
+.risk-pill,
+.confidence-text,
+.details-heading,
+.details-list,
+.details-panel {
+  text-align: left; /* Left-align these specific sections */
+}
+
+.details-panel {
+  padding-left: 20px; /* Add left padding for better readability */
+}
+
+/* Other content styles can remain unchanged */
